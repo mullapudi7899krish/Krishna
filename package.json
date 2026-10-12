@@ -1,0 +1,33 @@
+{
+  "name": "bp-project",
+  "version": "1.0.0",
+  "description": "A simple Node.js web app template",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "test": "node --check server.js",
+    "test:bdd": "node ./tests/run-bdd.js",
+    "test:bdd:headed": "node -e \"process.env.HEADLESS='false'; process.env.SLOW_MO='2000'; require('./tests/run-bdd.js')\"",
+    "test:e2e": "playwright test",
+    "test:e2e:headed": "playwright test --headed",
+    "test:e2e:chrome": "playwright test --project=chrome",
+    "test:e2e:edge": "playwright test --project=edge",
+    "test:e2e:install": "playwright install chromium"
+  },
+  "keywords": [
+    "node",
+    "express",
+    "webapp"
+  ],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "@cucumber/cucumber": "^13.3.0",
+    "@playwright/test": "^1.64.0"
+  }
+}
